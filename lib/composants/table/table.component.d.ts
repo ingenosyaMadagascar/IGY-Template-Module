@@ -9,7 +9,6 @@ export interface EnteteData {
     libelle: string;
     propertyname: string;
 }
-declare type BtnFunction = (value: any) => void;
 declare type radioOrCheckbox = 'radio' | 'checkbox' | undefined;
 export interface translate {
     itemsPerPageLabel: string;
@@ -19,11 +18,15 @@ export interface translate {
     lastPageLabel: string;
 }
 export interface BtnAction {
-    action: BtnFunction;
+    action: string;
     class: string;
     color: ThemePalette;
     iconName: string;
     istext: boolean;
+}
+export interface retourActionBouton {
+    function: string;
+    value: any;
 }
 export declare class TableComponent implements OnInit {
     paginator: MatPaginator;
@@ -60,6 +63,8 @@ export declare class TableComponent implements OnInit {
     classSatuts: string;
     /** évènenment Action click */
     ClickEventValue: EventEmitter<boolean>;
+    /** évenement bouton dans la table*/
+    ligne: EventEmitter<retourActionBouton>;
     /** text pour la langue */
     language: translate;
     headerColumn: any[];
@@ -97,7 +102,8 @@ export declare class TableComponent implements OnInit {
     /** selection element sur click de la ligne */
     checkLine(row: any, index: number): void;
     EventClickBtn(event: any): void;
+    getLine(txt: string, value?: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableComponent, "igy-table", never, { "data": "data"; "showFirstLastButtons": "showFirstLastButtons"; "pageSizeOptions": "pageSizeOptions"; "totalData": "totalData"; "pageSize": "pageSize"; "pageIndex": "pageIndex"; "header": "header"; "listbtn": "listbtn"; "libelleActionBtn": "libelleActionBtn"; "checkboxOrRadio": "checkboxOrRadio"; "checkboxColor": "checkboxColor"; "hasPaginator": "hasPaginator"; "hasStatus": "hasStatus"; "classSatuts": "classSatuts"; "language": "language"; }, { "_sort": "_sort"; "_pageEvent": "_pageEvent"; "selectvalue": "selectvalue"; "ClickEventValue": "ClickEventValue"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableComponent, "igy-table", never, { "data": "data"; "showFirstLastButtons": "showFirstLastButtons"; "pageSizeOptions": "pageSizeOptions"; "totalData": "totalData"; "pageSize": "pageSize"; "pageIndex": "pageIndex"; "header": "header"; "listbtn": "listbtn"; "libelleActionBtn": "libelleActionBtn"; "checkboxOrRadio": "checkboxOrRadio"; "checkboxColor": "checkboxColor"; "hasPaginator": "hasPaginator"; "hasStatus": "hasStatus"; "classSatuts": "classSatuts"; "language": "language"; }, { "_sort": "_sort"; "_pageEvent": "_pageEvent"; "selectvalue": "selectvalue"; "ClickEventValue": "ClickEventValue"; "ligne": "ligne"; }, never, never>;
 }
 export {};
