@@ -181,41 +181,24 @@
         @include typography("Montserrat", 14px, normal, 45px);
         color: $gris;
         padding-left: 15px;
+        > .status {
+          border-radius: 100px;
+          padding: 3px 10px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          align-items: center;
+          letter-spacing: 0.25px;
+          color: #000000;
+          &.nom-tarite {
+            background: rgba(128, 0, 128, 0.2);
+          }
+        }
       }
       &:last-child {
         .mat-cell {
           border-bottom: none;
-        }
-      }
-    }
-    .col-action-cnt {
-      text-align: center;
-      min-width: 150px;
-      .mat-sort-header-container {
-        justify-content: center;
-        padding: 0px 15px;
-      }
-    }
-    .table-btn {
-      background: transparent;
-      border: none;
-      margin: 0 5px;
-      width: auto;
-      box-shadow: none;
-      padding: 0;
-      &.delete {
-        .material-icons {
-          color: $theme-color-red;
-        }
-      }
-      &.edit {
-        .material-icons {
-          color: $safi_orange;
-        }
-      }
-      &.add {
-        .material-icons {
-          color: $safi-magenta;
         }
       }
     }
