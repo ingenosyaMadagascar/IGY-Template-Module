@@ -1,10 +1,19 @@
 // Typography
 h1 {
   @include typography("Montserrat", 24px, 700, 20px);
-  background: linear-gradient(90deg, #800080 27.6%, #FF6633 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-bottom: 20px;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  color: #000000;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #E4E4E4;
+  > .icons {
+    font-size: 24px;
+    margin-right: 15px;
+    color: inherit;
+  }
 }
 h2 {
   @include typography("Montserrat", 20px, 700, 20px);

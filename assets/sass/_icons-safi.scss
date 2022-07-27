@@ -26,6 +26,39 @@ $fontsPath: '/assets/fonts';
   -moz-osx-font-smoothing: grayscale;
 }
 
+.safi-carbon_gui-management:before {
+  content: "\e908";
+}
+.safi-carbon_settings-view:before {
+  content: "\e909";
+}
+.safi-eos-icons_content-lifecycle-management:before {
+  content: "\e90a";
+}
+.safi-ep_collection:before {
+  content: "\e90b";
+}
+.safi-fluent_content-settings-16-regular:before {
+  content: "\e90c";
+}
+.safi-helping:before {
+  content: "\e90d";
+}
+.safi-la_hands-helping:before {
+  content: "\e90e";
+}
+.safi-material-symbols_assignment-return-outline:before {
+  content: "\e90f";
+}
+.safi-uncheck:before {
+  content: "\e910";
+}
+.safi-wpf_create-new:before {
+  content: "\e911";
+}
+.safi-wpf_statistics:before {
+  content: "\e912";
+}
 .safi-logout:before {
   content: "\e900";
 }
@@ -41,7 +74,7 @@ $fontsPath: '/assets/fonts';
 .safi-fluent_mail-alert-16-regular:before {
   content: "\e904";
 }
-.safi-eos-icons_content-lifecycle-management:before {
+.safi-eos-icons_content-lifecycle-management1:before {
   content: "\e905";
 }
 .safi-bi_globe:before {
